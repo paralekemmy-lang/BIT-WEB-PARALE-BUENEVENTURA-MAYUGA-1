@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIT COURSE</title>
+  <style>
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #f4c542;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f4c542;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    header {
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://thumbs.dreamstime.com/b/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-121903546.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 180px 20px 120px;
+      margin-top: 70px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-size: 1.6em;
+      color: #f4c542;
+      margin-bottom: 25px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    /* ---------- SECTION WRAPPER ---------- */
+    section {
+      padding: 80px 10%;
+      background: #fff;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #f4c542;
+      margin-bottom: 40px;
+      font-size: 1.8em;
+    }
+
+    /* ---------- ABOUT SECTION ---------- */
+    .extra-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .extra-info div {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .extra-info p {
+      color: #333;
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+
+    /* ---------- CAREER SECTION ---------- */
+    .career {
+      background: #f4f4f4;
+    }
+
+    .career ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    .career li {
+      font-size: 1.2em;
+      margin: 10px 0;
+      color: #333;
+      font-weight: 500;
+    }
+
+    /* ---------- CONTACT SECTION ---------- */
+    .contact {
+      background: #fff;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact label {
+      font-weight: bold;
+      text-align: left;
+      color: #333;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    .contact button {
+      background-color: #f4c542;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background-color: #d4a123;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: rgba(0, 0, 0, 0.9);
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header h2 {
+        font-size: 1.2em;
+      }
+
+      section {
+        padding: 50px 20px;
+      }
+
+      .extra-info {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">💻 BIT COURSE</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="activities.html">Student Activities</a> <!-- ✅ linked to new page -->
+      <a href="#contact">Contact Us</a>
+    </div>
+  </nav>
+
+  <header id="home">
+    <h1>BACHELOR OF INDUSTRIAL TECHNOLOGY</h1>
+    <h2>Major in Computer Technology</h2>
+    <p>This course focuses on practical learning and modern technology.  
+       It helps students gain skills that are useful in today’s digital world.</p>
+  </header>
+
+  <section class="extra-info" id="about">
+    <div class="part1">
+      <h2>About the Program</h2>
+      <p>The BIT in Computer Technology program provides students with a balance of 
+      theory and practice. From learning coding languages to understanding 
+      computer networks, students are equipped with the tools to thrive in 
+      modern industries.</p>
+    </div>
+    <div class="part2">
+      <h2>ABOUT Program</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Non nobis incidunt a neque saepe libero vel, molestias repellendus error 
+        molestiae, asperiores accusamus exercitationem consequuntur, 
+        quisquam fugit sequi officiis doloribus dicta.</p>
+    </div>
+  </section>
+
+  <section class="career">
+    <h2>Career Opportunities</h2>
+    <ul>
+      <li>Software Developer</li>
+      <li>IT Support Specialist</li>
+      <li>Network Administrator</li>
+      <li>Computer Technician</li>
+      <li>Web Developer</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BIT Course. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Activities - BIT Course</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #f4c542;
+    }
+
+    .nav-links a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f4c542;
+    }
+
+    header {
+      background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://media.istockphoto.com/id/1263734072/photo/young-people-using-computers-in-the-computer-lab.jpg?s=2048x2048&w=is&k=20&c=3zWyoJb2mSlDyvB1qICZqQIBCHWoZXJ-1csmqM7EJqQ=') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 150px 20px 100px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: 800;
+      color: #f4c542;
+    }
+
+    section {
+      padding: 80px 10%;
+      background: #fff;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #f4c542;
+      margin-bottom: 40px;
+      font-size: 1.8em;
+    }
+
+    .activities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .activity-card {
+      background: #fafafa;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .activity-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .activity-card h3 {
+      color: #333;
+      margin: 15px;
+    }
+
+    .activity-card p {
+      color: #555;
+      margin: 0 15px 20px;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.9);
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">💻 BIT COURSE</div>
+    <div class="nav-links">
+      <a href="web  .html">Home</a>
+      <a href="activities.html">Student Activities</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Student Activities</h1>
+  </header>
+
+  <section>
+    <h2>Explore Our Programs</h2>
+    <div class="activities">
+      <div class="activity-card">
+        <img src="https://cdn.pixabay.com/photo/2017/06/29/01/04/coding-2458237_1280.jpg" alt="Coding Workshop">
+        <h3>Coding Workshop</h3>
+        <p>Students participate in hands-on sessions learning programming languages and real-world software development.</p>
+      </div>
+
+      <div class="activity-card">
+        <img src="https://cdn.pixabay.com/photo/2015/01/08/18/26/meeting-593301_1280.jpg" alt="Tech Expo">
+        <h3>Tech Expo</h3>
+        <p>BIT students showcase their innovative projects and network with IT professionals and industry partners.</p>
+      </div>
+
+      <div class="activity-card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/laptop-1839876_1280.jpg" alt="Community Outreach">
+        <h3>Community Outreach</h3>
+        <p>Students use their tech skills to help local communities by setting up computer labs and teaching digital literacy.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BIT Course. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

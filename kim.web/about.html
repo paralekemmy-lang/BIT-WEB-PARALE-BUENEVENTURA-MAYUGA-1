@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIT COURSE WEBSITE</title>
+  <link rel="stylesheet" href="bit.css">
+</head>
+<body>
+  <!-- Header -->
+<header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo" aria-label="BIT Program - Home">
+          <img src="./assets/logo-placeholder.png" alt="BIT Program logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News & Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+          <div></div><div></div><div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Bachelor of Information Technology</h1>
+      <p>Empowering the next generation of IT professionals with cutting-edge knowledge, practical skills, and innovative thinking.</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section features">
+    <div class="container">
+      <h2 class="section-title">Why Choose BIT?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💻</div>
+          <h3>Industry-Relevant Curriculum</h3>
+          <p>Our program is designed in collaboration with industry leaders to ensure you gain the skills employers need.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Expert Faculty</h3>
+          <p>Learn from experienced professionals and researchers who are passionate about technology and education.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Hands-On Learning</h3>
+          <p>Gain practical experience through labs, projects, internships, and industry collaborations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <!-- sa vission at mission -->
+    <section class="vision-mission">
+  <div class="vm-container">
+    <div class="vm-box vision">
+      <h2>VISION</h2>
+      <p>
+        A globally recognized university known for academic excellence,
+        innovative and responsive research and extension services for national
+        and global development.
+      </p>
+    </div>
+    <div class="vm-box mission">
+      <h2>MISSION</h2>
+      <p>
+        SLSU shall provide global education that nurtures competent professionals
+        who are morally grounded and responsive to community needs. The university
+        is also committed to conduct research and extension across various fields
+        while innovatively utilizing and regenerating its resources through
+        sustainable environmental approaches.
+      </p>
+    </div>
+  </div>
+</section>
+
+ <!-- Footer (Contact + Subscribe) -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>BIT Program</h3>
+          <p>Empowering the next generation of IT professionals with cutting-edge knowledge and practical skills.</p>
+          <div class="social-links">
+            <a href="#"><span>FB</span></a>
+            <a href="#"><span>IG</span></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="news.html">News & Events</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <div class="contact-mini">
+            <div class="row"><span class="label">Email:</span><span>buenaventuraalex04@gmail.com</span></div>
+            <div class="row"><span class="label">Phone:</span><span>09301766534</span></div>
+            <div class="row"><span class="label">Address:</span><span>Ibabang Dupay, Lucena City, Quezon, Philippines 4301</span></div>
+            <div class="contact-cta">
+              <button class="btn" id="openSubscribe">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2025 BIT Program. All rights reserved.</p>
+        <small>Photos & images: <strong>The Technolator</strong>. No reuse without permission.</small>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Subscribe Modal -->
+  <div class="modal" id="subscribeModal" aria-hidden="true" role="dialog" aria-labelledby="subscribeTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title" id="subscribeTitle">Subscribe to updates</div>
+        <button class="modal-close" id="closeSubscribe" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="subscribeForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="subEmail">Email</label>
+              <input id="subEmail" type="email" class="form-control" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" id="cancelSubscribe">Cancel</button>
+            <button type="submit" class="btn">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast">Subscribed! Check your inbox for a confirmation.</div>
+
+  <script>
+    // Mobile nav
+    (function(){
+      const burger = document.querySelector('.hamburger');
+      const links = document.querySelector('.nav-links');
+      if (!burger || !links) return;
+      const toggle = () => {
+        links.classList.toggle('active');
+        burger.classList.toggle('active');
+        burger.setAttribute('aria-expanded', burger.classList.contains('active'));
+      };
+      burger.addEventListener('click', toggle);
+      burger.addEventListener('keypress', e => (e.key === 'Enter') && toggle());
+    })();
+
+    // Subscribe modal
+    (function(){
+      const openBtn  = document.getElementById('openSubscribe');
+      const modal    = document.getElementById('subscribeModal');
+      const closeBtn = document.getElementById('closeSubscribe');
+      const cancel   = document.getElementById('cancelSubscribe');
+      const form     = document.getElementById('subscribeForm');
+      const emailInp = document.getElementById('subEmail');
+      const toast    = document.getElementById('toast');
+
+      function openModal() { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); setTimeout(()=>emailInp?.focus(), 50); }
+      function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
+      function showToast(msg){ toast.textContent = msg || 'Subscribed!'; toast.classList.add('show'); setTimeout(()=> toast.classList.remove('show'), 2000); }
+
+      openBtn?.addEventListener('click', openModal);
+      closeBtn?.addEventListener('click', closeModal);
+      cancel?.addEventListener('click', closeModal);
+      modal?.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+      window.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+      form?.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const email = (emailInp?.value || '').trim();
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!valid) { emailInp?.focus(); emailInp?.setAttribute('aria-invalid','true'); return; }
+
+        const key = 'bit_subscribers';
+        const list = JSON.parse(localStorage.getItem(key) || '[]');
+        if (!list.includes(email)) list.push(email);
+        localStorage.setItem(key, JSON.stringify(list));
+
+        // TODO: wire to backend/Google Form if desired
+        closeModal(); form.reset(); showToast('Subscribed! Check your inbox for a confirmation.');
+      });
+    })();
+  </script>
+</body>
+</html>
